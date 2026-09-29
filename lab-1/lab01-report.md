@@ -93,3 +93,34 @@ docker run -d --name lab-web-recrut17 -p 8080:80 -v "${PWD}\site:/usr/share/ngin
 (ссылка на лекцию: [монтирование тома](https://github.com/tiranousor/os-modern-docker-course/blob/main/4-course/docker-and-containers/lectures/03_docker_run.md#5-%D1%82%D0%BE%D0%BC-%D0%B4%D0%BB%D1%8F-%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85--v))
 
 ### 4) Интерактив / exec
+
+* Вход в интерактивный режим и просмотр содержимого каталога со статикой
+```bash
+#вход в интерактивный режим внутрь работающего контейнера
+docker exec it lab-web-recrut17 /bin/sh
+
+#переход в каталог со статикой 
+cd /usr/share/nginx/html
+
+#просмотр листинга каталога
+ls -la
+```
+![interactive.png](https://github.com/SLava17-52/docker-lab/blob/main/lab-1/interactive.png)
+
+* Попытка создания файла с :ro
+
+```bash
+touch test.txt
+```
+
+![interactive and create file ro.png](https://github.com/SLava17-52/docker-lab/blob/main/lab-1/interactive%20and%20create%20file%20ro.png)
+
+* Удаление :ro и добавление файла с переходом в режим `read-write`
+  
+![interactive and create file.png](https://github.com/SLava17-52/docker-lab/blob/main/lab-1/interactive%20and%20create%20file.png)
+
+* Файл на хосте после режима RW
+
+![interactive and list.png](https://github.com/SLava17-52/docker-lab/blob/main/lab-1/interactive%20and%20list.png)
+
+(ссылка на лекцию: [интерактивный режим](https://github.com/tiranousor/os-modern-docker-course/blob/main/4-course/docker-and-containers/lectures/02_commands.md#%D1%88%D0%B0%D0%B3-3-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-%D0%B2-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%8E%D1%89%D0%B5%D0%BC-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D0%B5-docker-exec))
