@@ -163,3 +163,11 @@ docker ps -a
 * Контейнер работает только пока выполняется его основная команда. Команда `echo` срабатывает моментально, поэтому как только она заканчивается, контейнеру больше нечего делать — он сразу останавливается и получает статус `Exited`.
 
 (ссылка на лекцию: [краткоживущий процесс](https://github.com/tiranousor/os-modern-docker-course/blob/main/4-course/docker-and-containers/lectures/03_docker_run.md#6-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5---rm))
+
+### 7) Inspect
+* Вырезка блока `mounts`
+![mounts.png](https://github.com/SLava17-52/docker-lab/blob/main/lab-1/mounts.png)
+* Вырезка блока `ports`
+![ports.png](https://github.com/SLava17-52/docker-lab/blob/main/lab-1/ports.png)
+
+(ссылка на лекцию: [инспекция контейнера](https://github.com/tiranousor/os-modern-docker-course/blob/main/4-course/docker-and-containers/lectures/03_docker_run.md#7-%D0%B8%D0%BD%D1%81%D0%BF%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D0%B0-docker-inspect))
