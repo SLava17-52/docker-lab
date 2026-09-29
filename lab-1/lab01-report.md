@@ -123,4 +123,28 @@ touch test.txt
 
 ![interactive and list.png](https://github.com/SLava17-52/docker-lab/blob/main/lab-1/interactive%20and%20list.png)
 
+### 5) Логи и attach
+
+```bash
+#обновление страницы и переход по несуществующему пути
+curl http://localhost:8080/
+curl http://localhost:8080/nope
+curl http://localhost:8080/nope123
+curl http://localhost:8080/nope1234
+
+#вывод 10 строк из журнала контейнера
+docker logs --tail 10 lab-web-recrut17
+```
+
+![fragment magazine.png](https://github.com/SLava17-52/docker-lab/blob/main/lab-1/logs.png)
+
+```bash
+#прикрепляемся к основному процессу контейнера
+docker attach lab-web-recrut17
+```
+Для выхода из attac ( без остановки контейнера),  нажимаем Ctrl + P, затем Ctrl + Q.
+Также ещё можно нажать Ctrl + C с помощью которого можно остановить основной процесс контейнера
+
+(ссылки на лекции: [получение логов](https://github.com/tiranousor/os-modern-docker-course/blob/main/4-course/docker-and-containers/lectures/03_docker_run.md#8-%D0%BB%D0%BE%D0%B3%D0%B8-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D0%B0-docker-logs), [прикрепление и открепление от контейнера](https://github.com/tiranousor/os-modern-docker-course/blob/main/4-course/docker-and-containers/lectures/02_commands.md#10-docker-attach-%D0%B8--d-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B5-%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0))
+
 (ссылка на лекцию: [интерактивный режим](https://github.com/tiranousor/os-modern-docker-course/blob/main/4-course/docker-and-containers/lectures/02_commands.md#%D1%88%D0%B0%D0%B3-3-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-%D0%B2-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%8E%D1%89%D0%B5%D0%BC-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D0%B5-docker-exec))
