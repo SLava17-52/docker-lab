@@ -142,7 +142,7 @@ docker logs --tail 10 lab-web-recrut17
 #прикрепляемся к основному процессу контейнера
 docker attach lab-web-recrut17
 ```
-Для выхода из attac ( без остановки контейнера),  нажимаем Ctrl + P, затем Ctrl + Q.
+Для выхода из attach ( без остановки контейнера),  нажимаем Ctrl + P, затем Ctrl + Q.
 Также ещё можно нажать Ctrl + C с помощью которого можно остановить основной процесс контейнера
 
 (ссылки на лекции: [получение логов](https://github.com/tiranousor/os-modern-docker-course/blob/main/4-course/docker-and-containers/lectures/03_docker_run.md#8-%D0%BB%D0%BE%D0%B3%D0%B8-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D0%B0-docker-logs), [прикрепление и открепление от контейнера](https://github.com/tiranousor/os-modern-docker-course/blob/main/4-course/docker-and-containers/lectures/02_commands.md#10-docker-attach-%D0%B8--d-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B5-%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0))
