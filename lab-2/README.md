@@ -92,5 +92,5 @@ HEALTHCHECK --interval=25s --timeout=3s --start-period=5s --retries=5 \
 ```
 
 Ссылка на Docker Hub: https://hub.docker.com/r/slava17recr/image-lab/tags
-
+Ссылка на проект: https://github.com/SLava17-52/dockerlab2
 
